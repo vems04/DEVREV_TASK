@@ -246,14 +246,20 @@ public class Users {
                     Admin_privilege(a);
                     break;
                 }
+                int p=0;
                 System.out.println("USER_ID"+" "+"NAME"+" "+"PHONE"+" "+"EMAIL"+" "+"PLACE"+" "+"DATE"+" "+"SERVICE");
                 for(Users m : Booking_details.values()){
+                        if (p == 0) {
+                            System.out.print("");
+                            p=1;
+                        }
+                        else{
                     System.out.println(m.user_id+" "+m.name+" "+m.phone+" "+m.email+" "+m.place+" "+m.date+" "+m.service);
-                }
+                }}
                 System.out.println("FILTER WITH RESPECT TO 1.PLACES 2.DATE");
                 int opt=sc.nextInt();
                 int f=0;
-                int p=0;
+                 p=0;
                 if(opt==1){
                     System.out.println("ENTER PLACE NAME IN CAPITAL LETTERS");
                     String word =sc.next().toUpperCase();
