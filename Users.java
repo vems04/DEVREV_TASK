@@ -255,7 +255,8 @@ public class Users {
                         }
                         else{
                     System.out.println(m.user_id+" "+m.name+" "+m.phone+" "+m.email+" "+m.place+" "+m.date+" "+m.service);
-                }}
+                }
+                }
                 System.out.println("FILTER WITH RESPECT TO 1.PLACES 2.DATE");
                 int opt=sc.nextInt();
                 int f=0;
@@ -306,9 +307,9 @@ public class Users {
                     break;
                  }
                 else{
-                    System.out.println("enter correct value");
-                Admin_privilege(a);
-                break;
+                    System.out.println("ENTER CORRECT VALUE");
+                    Admin_privilege(a);
+                    break;
                 }
             case 4:
                 if(Booking_details.isEmpty()){
@@ -349,6 +350,7 @@ public class Users {
     }
     public void Add_city(String place){
         RecentCities.add(place);
+
     }
     public void Add_Service(String place){
         RecentServices.add(place);
@@ -363,7 +365,7 @@ public class Users {
         }
         else if(REJECTEDLIST.contains(a.user_id)) {
             System.out.println("BOOKING REJECTED BY ADMIN");
-            System.out.println("FOR QUERIES CONTACT 1234567890");
+            System.out.println("FOR QUERIES CONTACT 1234567890 OR E-MAIL : ADMIN1@DEVREV.COM");
         }
         else{
             System.out.println("YOUR BOOKING IS STILL PENDING");
@@ -472,7 +474,7 @@ public class Users {
                     }
                     Booking_details.put(a.user_id,a);
                     System.out.println("YOUR BOOKING IS UNDER PROGRESS LOGIN AFTER SOMETIME TO CHECK BOOKING STATUS");
-                    Users m = new Users(a.user_id,a.name,a.phone,a.email,cities[city_no-1],date,RecentServices.get(service_id-2));
+                    Users m = new Users(a.user_id,a.name,a.phone,a.email,cities[city_no-2],date,RecentServices.get(service_id-2));
                     Booking_list(m.refnumber,m);
                     Booking_system(a,option);
                     break;
